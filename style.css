@@ -103,7 +103,7 @@ main {
 
 @media (max-width: 500px) {
     .movie {
-        flex: 1 0 calc(100%);
+        flex: 1 0 calc(90%);
     }
 }
 
