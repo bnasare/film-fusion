@@ -72,7 +72,8 @@ main {
     overflow: hidden;
     position: relative;
     margin: 1rem;
-    width: 231px;
+    flex: 1 0 calc(18.33%);
+    width: 250px;
     border-style: dashed;
     border-width: 2.5px;
     border-color: rgb(53, 53, 255);
@@ -80,9 +81,19 @@ main {
     border-radius: 10px;
 }
 
-@media (max-width: 600px) {
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+@media (max-width: 1000px) {
     .movie {
-        width: 100%;
+        flex: 1 0 calc(25.33%);
+    }
+}
+
+@media (max-width: 700px) {
+    .movie {
+        flex: 1 0 calc(30.33%);
     }
 }
 
