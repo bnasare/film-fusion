@@ -77,7 +77,6 @@ main {
     overflow: hidden;
     position: relative;
     margin: 1rem;
-    flex: 1 0 calc(18.33%);
     width: 250px;
     border-style: dashed;
     border-width: 2.5px;
@@ -86,8 +85,15 @@ main {
     border-radius: 10px;
 }
 
+
 .movie:hover .overview {
     transform: translateY(0);
+}
+
+@media (max-width: 1800px) {
+    .movie {
+        flex: 1 0 calc(18.33%);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -105,6 +111,7 @@ main {
 @media (max-width: 500px) {
     .movie {
         flex: 1 0 calc(50%);
+        width: 100%;
     }
 }
 
