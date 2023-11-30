@@ -5,35 +5,59 @@
 }
 
 body {
-    background-color: crimson;
+    background-color: #22254b;
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
 header {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     padding: 1rem;
-    background-color: #a83d3d;
+    background-color: #373b69;
+}
+
+header h1 {
+    margin: 0;
+    color: #eee;
+    letter-spacing: 3px;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
 }
 
 .search {
     background-color: transparent;
-    border: 2px solid red;
-    border-radius: 50px;
+    border: 2px solid #22254b;
+    border-radius: 10px;
     font-family: inherit;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     color: #fff;
 }
 
+@media (max-width: 600px) {
+    .search {
+        font-size: 1rem;
+        width: 150px;
+    }
+}
+
 .search:focus {
     outline: none;
-    background-color: red;
+    background-color: #22254b;
 }
 
 .search::placeholder {
-    color: whitesmoke;
+    color: #22254b;
 }
 
 main {
@@ -43,17 +67,28 @@ main {
 }
 
 .movie {
-    background-color: #a83d3d;
-    border-radius: 3px;
+    background-color: #373b69;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
     margin: 1rem;
-    width: 300px;
+    width: 231px;
+    border-style: dashed;
+    border-width: 2.5px;
+    border-color: rgb(53, 53, 255);
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .movie {
+        width: 100%;
+    }
 }
 
 .movie img {
     width: 100%;
+    height: 75%;
 }
 
 .movie-info {
@@ -65,7 +100,8 @@ main {
 }
 
 .movie-info h3 {
-    margin: 0;
+    margin-right: 10px;
+    line-height: 1.1;
 }
 
 .movie-info span {
@@ -88,7 +124,7 @@ main {
 }
 
 .overview {
-    background-color: #fff;
+    background-color: #d7e5f3;
     padding: 2rem;
     position: absolute;
     left: 0;
@@ -97,6 +133,11 @@ main {
     max-height: 100%;
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
+    overflow-y: scroll;
+}
+
+.overview::-webkit-scrollbar {
+    display: none;
 }
 
 .movie:hover .overview {
